@@ -1,0 +1,348 @@
+// Global Colors
+$primary-color: #fe538d;
+$secondary-color: #FFB703;
+$text-color: #1d1d1d;
+$text-white:#ffff;
+$dark-background: #222725;
+$light-background: #bbbbbb;
+
+// Typography
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+body{
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-size: 4.5em;
+}
+h2{
+    font-size: 3em;
+}
+h3{
+    font-size: 2em;
+}
+p{
+    font-size: 1.2em;
+}
+ul{
+    padding-left: 0;
+    li{
+        list-style: none;
+    }
+}
+
+.small{
+    padding: 10px 15px;
+}
+.large{
+    padding: 15px 20px;
+}
+
+.btn-primary{
+    background-color: $primary-color;
+    color: $text-white;
+    border: 1px solid $primary-color;
+    outline: none;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    &:hover{
+       background-color: $secondary-color;
+       color: $text-white;
+       border: 1px solid $secondary-color;
+    }
+}
+
+.btn-secondary{
+    background-color: $secondary-color;
+    color: $text-white;
+    border: 1px solid $secondary-color;
+    outline: none;
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    &:hover{
+       background-color: $primary-color;
+       color: $text-white;
+       border: 1px solid $primary-color;
+    }
+}
+
+footer{
+    background-color: $dark-background;
+     color: $text-white;
+    h3{
+        font-size: 1.5em;
+        color: $secondary-color;
+    }
+    ul{
+        li{
+            padding: 5px 0;
+        }
+    }
+    a{
+        color: $text-white;
+        font-size: 1.2em;
+        text-decoration: none;
+        &:hover{
+            color: $primary-color;
+        }
+    }
+    
+}
+
+.bg-light{
+    background-color: $light-background;
+}
+.section-header{
+    span{
+        color: $primary-color;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        display: block;
+        font-weight: 500;
+    }
+}
+// Header
+header{
+    nav{
+        .nav-link{
+            text-transform: uppercase;
+            font-size: 1em;
+            color: $text-color;
+            font-weight: 500;
+            margin-left: 20px;
+            &:hover{
+                color: $primary-color;
+            }
+        }
+        .logo{
+            text-transform: uppercase;
+            font-size: 1em;
+            color: $text-color;
+            font-weight: 500;
+            span{
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.section-1{
+    .hero{
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url('../images/hero.jpg');
+        min-height: 700px;
+        color: $text-white;
+        span{
+            color: $secondary-color;
+            font-size: 1.5em;
+            font-weight: 400;
+        }
+    }
+}
+.section-2{
+    img{
+        border-radius: 40px;
+    }
+    span{
+        color: $primary-color;
+        text-transform: uppercase;
+        font-size: 1.2em;
+        display: block;
+        font-weight: 500;
+
+    }
+}
+.section-3{
+    .item{
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 20px;
+        &:hover{
+            .service-body{
+               transform: translateY(0%);
+               .service-content{
+                   opacity: 1;
+               }
+            }
+        }
+        .service-img{
+            position: relative;
+            overflow: hidden;
+            img{
+                width: 100%;
+                object-fit: cover;
+                border-radius: 40px;
+                aspect-ratio: 1 / 1.2;
+            }
+             &:after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                border-radius: 40px;
+                background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, 0) 15.02%, rgba(0, 0, 0, 0.51) 42.5%, rgba(0, 0, 0, 0.63) 100%, #0000 100%);
+            }
+        }
+
+        .service-body{
+            color: $text-white;
+            position: absolute;
+            left: 30px;
+            right: 30px;
+            bottom: 30px;
+            transform: translateY(80%);
+            transition: all 0.4s ease-in-out;
+
+            .service-content{
+                transition: all 0.4s ease-in-out;
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.section-4{
+    .card{
+        border-radius: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+.section-5{
+    .swiper{
+        padding: 25px 25px 70px 25px;
+        .swiper-pagination-bullet-active{
+            background-color: $secondary-color;
+        }
+    }
+    .card{
+        border-radius: 40px;
+        .card-body{
+            .rating{
+                color: $secondary-color;
+            }
+            .content{
+                p{
+                    font-size: 1em;
+                }
+            }
+            .meta{
+                img{
+                    border-radius: 50%;
+                }
+            }
+            .name{
+                font-size: 1.3em;
+                font-weight: 500;
+            }
+        }
+    }
+}
+.section-6{
+    .card{
+        border-radius: 40px;
+        img{
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+        }
+        .card-body{
+            a{
+                font-size: 1.4em;
+                text-decoration: none;
+                color: $text-color;
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+.section-7{
+    .hero{
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url('../images/hero.jpg');
+        min-height: 500px;
+        color: $text-white;
+        span{
+            color: $secondary-color;
+            font-size: 1.5em;
+            font-weight: 400;
+        }
+    }
+}
+.section-8{
+    .card{
+        border-radius: 40px;
+        img{
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+        }
+        .card-body{
+            a{
+                font-size: 1.4em;
+                text-decoration: none;
+                color: $text-color;
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+            .card-title{
+                font-size: 1.5em;
+                font-weight: 500;
+            }
+            .card-sub-title{
+                font-size: 1.3em;
+                color: $light-background;
+            }
+        }
+    }
+}
+.section-9{
+    .hero{
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)), url('../images/hero.jpg');
+        min-height: 500px;
+        color: $text-white;
+        span{
+            color: $secondary-color;
+            font-size: 1.5em;
+            font-weight: 400;
+        }
+    }
+    .card{
+        border-radius: 40px;
+    }
+}
+.login-form{
+    .card{
+        width: 450px;
+    }
+}
+.dashboard{
+    .card{
+        min-height: 400px;
+    }
+}
+.sidebar{
+    ul{
+        li{
+            a{
+                display: block;
+                padding: 10px 0;
+                text-decoration: none;
+                color: $text-color;
+                border-bottom: 2px solid rgba(0, 0, 0, 0.20);
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+            
+        }
+    }
+}
